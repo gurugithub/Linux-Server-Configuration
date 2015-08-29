@@ -73,16 +73,16 @@ http://54.213.0.20/
 from flask import Flask
 from applicationinsights.requests import WSGIApplication
 
-# instantiate the Flask application and wrap its WSGI application
+*instantiate the Flask application and wrap its WSGI application
 app = Flask(__name__)
-app.wsgi_app = WSGIApplication('My azure key', app.wsgi_app)
+app.wsgi_app = WSGIApplication('Guru azure key', app.wsgi_app)
 
-# define a simple route
+*define a simple route
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+def hello_udacity():
+    return 'Catalog App is running!'
 
-# run the application
+* run the application
 if __name__ == '__main__':
     app.run()
 
